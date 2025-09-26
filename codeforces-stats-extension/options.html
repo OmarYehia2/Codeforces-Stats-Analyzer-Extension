@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Codeforces Stats Options</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body style="padding:16px;max-width:560px">
+  <h2>Default Settings</h2>
+  <div class="row">
+    <label for="defaultHandle">Default Handle</label>
+    <input id="defaultHandle" placeholder="tourist" />
+    <button id="save" class="primary">Save</button>
+  </div>
+  <div id="saved" class="status"></div>
+
+<script>
+const handleEl = document.querySelector("#defaultHandle");
+const savedEl = document.querySelector("#saved");
+document.querySelector("#save").addEventListener("click", () => {
+  const v = (handleEl.value || "").trim();
+  chrome.storage.sync.set({ defaultHandle: v }, () => {
+    savedEl.textContent = "Saved.";
+    setTimeout(()=> savedEl.textContent="", 1200);
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  chrome.storage.sync.get(["defaultHandle"], v => handleEl.value = v.defaultHandle || "");
+});
+</script>
+</body>
+</html>
+
+

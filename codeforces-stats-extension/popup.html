@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Codeforces Stats</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div style="font-size:20px">🏁</div>
+    <h1>Codeforces Stats</h1>
+  </header>
+
+  <section class="controls">
+    <div class="row">
+      <label for="handle">Handle</label>
+      <input id="handle" placeholder="MR_NoSolution" style="width:140px" />
+      <button id="usePage">Use page</button>
+      <button id="useDefault">Use default</button>
+    </div>
+    <div class="row">
+      <label for="from">From</label>
+      <input id="from" type="date" />
+      <label for="to">To</label>
+      <input id="to" type="date" />
+    </div>
+    <div class="row">
+      <button id="last30">Last 30d</button>
+      <button id="fetch" class="primary">Fetch</button>
+      <button id="clear">Clear</button>
+      <button id="saveCsv" disabled>Save CSV</button>
+    </div>
+    <div id="status" class="status">Ready.</div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>Tags</h2>
+      <div id="tags"></div>
+    </div>
+    <div class="card">
+      <h2>Solved details</h2>
+      <div id="solved" class="mono"></div>
+      <div id="stats" class="stats"></div>
+    </div>
+  </section>
+
+<script type="module" src="popup.js"></script>
+</body>
+</html>
+
+
+

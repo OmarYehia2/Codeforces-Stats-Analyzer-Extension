@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Codeforces Stats Analyzer",
+  "version": "1.0.0",
+  "description": "Analyze Codeforces solved problems by tags and rating in a date range.",
+  
+  "action": {
+    "default_title": "Codeforces Stats",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["https://codeforces.com/*"]
+}
+
+
+

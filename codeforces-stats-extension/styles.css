@@ -1,0 +1,145 @@
+:root {
+    --bg: #0b1220;
+    --card: #121a2b;
+    --text: #e6eefc;
+    --muted: #9fb3d2;
+    --accent: #5b8cff;
+    --border: #25304a;
+    --good: #28c76f
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    width: 820px;
+    max-width: 100vw;
+    background: var(--bg);
+    color: var(--text);
+    font: 14px/1.4 system-ui, Segoe UI, Arial
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border)
+}
+
+.header h1 {
+    font-size: 16px;
+    margin: 0
+}
+
+.controls {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border)
+}
+
+.row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin: 8px 0;
+    flex-wrap: wrap
+}
+
+label {
+    color: var(--muted)
+}
+
+input {
+    background: #0e1626;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 6px 8px;
+    border-radius: 6px
+}
+
+button {
+    background: #1a2440;
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer
+}
+
+button.primary {
+    background: var(--accent);
+    border-color: transparent
+}
+
+button:disabled {
+    opacity: .6;
+    cursor: not-allowed
+}
+
+.status {
+    margin-top: 6px;
+    color: var(--muted)
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 12px 14px
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px
+}
+
+.card h2 {
+    font-size: 15px;
+    margin: 0 0 8px 0;
+    color: #dbe7ff
+}
+
+.mono {
+    font-family: Consolas, ui-monospace, monospace;
+    white-space: pre-wrap
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+.table th,
+.table td {
+    padding: 6px;
+    border-bottom: 1px solid var(--border);
+    text-align: left
+}
+
+.badge {
+    display: inline-block;
+    background: #18264a;
+    border: 1px solid var(--border);
+    padding: 2px 6px;
+    border-radius: 999px;
+    color: #cfe0ff
+}
+
+.stats {
+    margin-top: 10px;
+    color: #d0f0ff
+}
+
+.good {
+    color: var(--good);
+    font-weight: 600
+}
